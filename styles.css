@@ -399,6 +399,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .comment__img-user{
@@ -665,15 +666,39 @@ a{
 
 @media (max-width: 480px){
 
+    .product__cards, .special__cards{
+        grid-template-columns: repeat(1,250px);
+        margin: 0 auto;
+        gap: 15px;
+    }
+
+    .product__title, .special__title, .coment__title{
+        font-size: 24px;
+    }
+
+    .comment__card{
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .banner__image-right, .banner__image-left{
+        max-width: 100px;
+    }
+    
+    .banner__image-left, .subscribe__img-right{
+        display: none;
+    }
+
     .header .header__list{
-        gap: 10px;
+        gap: 8px;
+    }
+
+    .header__link{
+        font-size: 16px;
     }
 
     .hero__subtitle{
         font-size: 65px;
     }
 
-    .comment__card{
-        max-width: 380px;
-    }
 }
